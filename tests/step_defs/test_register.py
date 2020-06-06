@@ -15,6 +15,10 @@ def test_register_with_right_credentials():
 def test_register_with_wrong_credentials():
     pass
 
+@scenario("../features/register.feature", "User exist while trying to register")
+def test_register_exists():
+    pass
+
 
 @when("Required data for registration are set")
 def required_data() -> None:
@@ -84,3 +88,34 @@ def response_status_code() -> None:
     assert r.status_code == 422
     assert res_json
     assert res_json['error']["password"][0] == "The password field is required."
+
+
+@when("Data for a user that is already registered is set")
+def set_data() -> None:
+    global user_data
+    password = fake.password()
+    user_data = {
+        "name": fake.name(),
+        "email": fake.email(),
+        "password": password,
+        "password_confirmation": password,
+        "username": fake.name(),
+    }
+
+
+@when("POST Request is made to endpoint with those data")
+def post_exist_data(api_endpoint) -> None:
+    register_response = requests.post(
+        api_endpoint, json=user_data
+    )
+
+    # after a user is created we try again to create the same user
+    global second_request
+    second_request = requests.post(
+        api_endpoint, json=user_data
+    )
+
+
+@then("Response status code should be 500")
+def step_status_code() -> None:
+    assert second_request.status_code == 500
