@@ -1,3 +1,4 @@
+@register
 Feature: Register
   As a user I want to register in the system,
   so I can access features of the platform
@@ -12,3 +13,8 @@ Feature: Register
     Then  Response status code should be 200
     And   The response body should contain id, email and hashed_password
 
+  @wrong-credentials
+  Scenario: User Registration with wrong credentials
+    When  Data for registration don't fit the requirement fields
+    And   POST request is made to endpoint with bad body request
+    Then  Response status code should be 422
