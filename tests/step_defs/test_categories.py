@@ -2,7 +2,7 @@ import requests
 from faker import Faker
 from pytest_bdd import scenario, given, when, then, parsers
 
-from .conftest import BDD_BASE_URL, SUPERUSER_PASSWORD, SUPERUSER_EMAIL
+from .conftest import BDD_BASE_URL
 
 fake = Faker()
 
