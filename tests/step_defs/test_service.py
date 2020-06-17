@@ -53,6 +53,7 @@ def step_impl():
     message = req.json()['message']
     assert message == 'Successfully created Service!'
 
+
 @then("Response should contain Service key")
 def step_impl():
     req_json = req.json()
