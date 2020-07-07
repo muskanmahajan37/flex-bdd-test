@@ -9,6 +9,8 @@ __pycache__/
 # C extensions
 *.so
 
+./Reports
+
 # Distribution / packaging
 .Python
 build/
@@ -133,3 +135,36 @@ dmypy.json
 # Pyre type checker
 .pyre/
 !/.pytest_cache/
+/Reports/c9bbd01f-d2f0-46c9-a604-636be50457d3-result.json
+/venvv/pyvenv.cfg
+/venvv/Scripts/mako-render.exe
+/venvv/Scripts/pip.exe
+/venvv/Scripts/pip3.8.exe
+/venvv/Scripts/pip3.8-script.py
+/venvv/Scripts/pip3.exe
+/venvv/Scripts/pip3-script.py
+/venvv/Scripts/pip-script.py
+/venvv/Scripts/py.test.exe
+/venvv/Scripts/pytest.exe
+/venvv/Scripts/pytest-bdd.exe
+/venvv/Scripts/python.exe
+/venvv/Scripts/pythonw.exe
+/venvv/Scripts/easy_install-script.py
+/venvv/Scripts/easy_install-3.8-script.py
+/venvv/Scripts/easy_install-3.8.exe
+/venvv/Scripts/easy_install.exe
+C:\Users\MROBOT\Desktop\flex-bdd-test\Reports
+venvv/Include/
+venvv/Scripts/Activate.ps1
+venvv/Scripts/activate
+venvv/Scripts/activate.bat
+venvv/Scripts/chardetect.exe
+venvv/Scripts/deactivate.bat
+venvv/Scripts/dotenv.exe
+venvv/Scripts/easy_install-3.8-script.py
+venvv/Scripts/easy_install-3.8.exe
+venvv/Scripts/easy_install-script.py
+venvv/Scripts/easy_install.exe
+venvv/Scripts/faker.exe
+40ae-b7f1-fb9b16e7cea5-attachment.txt
+Reports

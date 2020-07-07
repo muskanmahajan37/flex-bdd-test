@@ -5,6 +5,7 @@ import requests
 import selenium.webdriver
 from pytest_bdd import given
 
+
 BDD_BASE_URL = os.getenv("BDD_BASE_URL")
 SUPERUSER_EMAIL = os.getenv("SUPERUSER_EMAIL")
 SUPERUSER_PASSWORD = os.getenv("SUPERUSER_PASSWORD")
