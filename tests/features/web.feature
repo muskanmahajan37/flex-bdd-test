@@ -1,4 +1,3 @@
-@web
 Feature: Facebook login
   As a web surfer,
   I want to find information online,

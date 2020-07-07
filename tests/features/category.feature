@@ -1,3 +1,4 @@
+@bddapi
 Feature: Categories
   As a admin user want to add categories
 

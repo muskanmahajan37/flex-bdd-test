@@ -1,4 +1,4 @@
-@multiple-test
+@bddapi
 Feature: Register
   As a user I want to register in the system,
   so I can access platform-features

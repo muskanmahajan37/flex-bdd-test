@@ -1,4 +1,4 @@
-@register
+@bddapi
 Feature: Register
   As a user I want to register in the system,
   so I can access features of the platform

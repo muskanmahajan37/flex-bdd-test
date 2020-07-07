@@ -1,12 +1,35 @@
 import os
 
+import pytest
 import requests
+import selenium.webdriver
 from pytest_bdd import given
 
 BDD_BASE_URL = os.getenv("BDD_BASE_URL")
 SUPERUSER_EMAIL = os.getenv("SUPERUSER_EMAIL")
 SUPERUSER_PASSWORD = os.getenv("SUPERUSER_PASSWORD")
 
+# UI Test
+
+@pytest.fixture
+def browser():
+    b = selenium.webdriver.Chrome("resources/chromedriver.exe")
+    b.implicitly_wait(10)
+    yield b
+    b.quit()
+
+@given("API endpoint for flex-homepage is given")
+def homepage_api():
+    FLEX_HOME = "http://localhost:3000/"
+    return FLEX_HOME
+
+
+@given("FLEX homepage is shown")
+def flex_homepage(homepage_api, browser):
+    browser.get(homepage_api)
+
+
+# Fixtures and given steps from other API tests
 @given("API endpoint for user registration")
 def api_endpoint() -> str:
     REGISTER_URL = f"{BDD_BASE_URL}/register"
@@ -42,4 +65,7 @@ def user_logged_in():
         "Authorization": f"Bearer {access_token}"
     }
     return headers
+
+
+
 

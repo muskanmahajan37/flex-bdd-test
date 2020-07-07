@@ -9,16 +9,16 @@ from selenium.webdriver.common.keys import Keys
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
-# scenarios('../features/web.feature')
-
-
-# Fixtures
-@pytest.fixture
-def browser():
-    b = webdriver.Chrome("resources/chromedriver.exe")
-    b.implicitly_wait(10)
-    yield b
-    b.quit()
+scenarios('../features/web.feature')
+#
+#
+# # Fixtures
+# @pytest.fixture
+# def browser():
+#     b = webdriver.Chrome("resources/chromedriver.exe")
+#     b.implicitly_wait(10)
+#     yield b
+#     b.quit()
 
 
 FACEBOOK = 'https://facebook.com/'

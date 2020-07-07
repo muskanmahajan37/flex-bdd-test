@@ -1,4 +1,4 @@
-# Created by MROBOT at 6/10/2020
+@bddapi
 Feature: #Enter feature name here
   # Enter feature description here
 

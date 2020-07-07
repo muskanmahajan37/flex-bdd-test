@@ -1,4 +1,4 @@
-@login-outline
+@bddapi
 Feature: Login
   As a user I want to login in the system,
   so I can access manage my account
