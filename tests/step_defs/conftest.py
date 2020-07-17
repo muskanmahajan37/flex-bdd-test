@@ -14,8 +14,9 @@ SUPERUSER_PASSWORD = os.getenv("SUPERUSER_PASSWORD")
 
 @pytest.fixture
 def browser():
-    b = selenium.webdriver.Chrome("resources/chromedriver.exe")
+    b = selenium.webdriver.Chrome(executable_path="resources/chromedriver.exe")
     b.implicitly_wait(10)
+    b.maximize_window()
     yield b
     b.quit()
 

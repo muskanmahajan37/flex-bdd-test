@@ -1,4 +1,4 @@
-@seleniumm
+@abc
 Feature: Payment
   As a user,
   I want to order
@@ -13,4 +13,5 @@ Feature: Payment
     Then  User navigates to programming
     Then  User clicks on a service
     Then  Chooses to pay
+    Then  The payment should be finished
 
