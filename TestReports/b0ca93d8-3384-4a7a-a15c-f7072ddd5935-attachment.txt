@@ -1,0 +1,5 @@
+Exception ignored in: <socket.socket fd=884, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60345), raddr=('127.0.0.1', 60340)>
+Traceback (most recent call last):
+  File "C:\Users\MROBOT\AppData\Local\Programs\Python\Python38-32\lib\json\encoder.py", line 322, in _iterencode_list
+    chunks = _iterencode_dict(value, _current_indent_level)
+ResourceWarning: unclosed <socket.socket fd=884, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60345), raddr=('127.0.0.1', 60340)>

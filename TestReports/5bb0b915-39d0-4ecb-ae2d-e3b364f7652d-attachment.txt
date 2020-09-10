@@ -1,0 +1,1 @@
+{'created_category': {'name': 'Kristen Rice', 'description': 'Victoria Evans', 'updated_at': '2020-08-02T21:25:13.000000Z', 'created_at': '2020-08-02T21:25:13.000000Z', 'id': 7}, 'message': 'Successfully created category!'}

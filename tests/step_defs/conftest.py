@@ -5,10 +5,14 @@ import requests
 import selenium.webdriver
 from pytest_bdd import given
 
-
 BDD_BASE_URL = os.getenv("BDD_BASE_URL")
 SUPERUSER_EMAIL = os.getenv("SUPERUSER_EMAIL")
 SUPERUSER_PASSWORD = os.getenv("SUPERUSER_PASSWORD")
+LOGIN_URL = os.getenv("LOGIN_URL")
+SIGNUP_URL = os.getenv("SIGNUP_URL")
+TEST_USER_EMAIL = os.getenv("TEST_USER_EMAIL")
+TEST_USER_PASSWORD = os.getenv("TEST_USER_PASSWORD")
+
 
 # UI Test
 
@@ -19,6 +23,7 @@ def browser():
     b.maximize_window()
     yield b
     b.quit()
+
 
 @given("API endpoint for flex-homepage is given")
 def homepage_api():
@@ -50,7 +55,6 @@ def categories_endpoint():
     return CATEGORIES_ENDPOINT
 
 
-
 @given("User is logged in")
 def user_logged_in():
     data = {
@@ -67,7 +71,3 @@ def user_logged_in():
         "Authorization": f"Bearer {access_token}"
     }
     return headers
-
-
-
-

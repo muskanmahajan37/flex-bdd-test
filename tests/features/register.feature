@@ -19,7 +19,6 @@ Feature: Register
     And   POST request is made to endpoint with bad body request
     Then  Response status code should be 422
 
-
   @exist
   Scenario: User exist while trying to register
     When  Data for a user that is already registered is set

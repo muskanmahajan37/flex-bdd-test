@@ -1,0 +1,10 @@
+Exception ignored in: <socket.socket fd=1012, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59955), raddr=('127.0.0.1', 59950)>
+Traceback (most recent call last):
+  File "C:\Users\MROBOT\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 227, in __init__
+    self.acquire = lock.acquire
+ResourceWarning: unclosed <socket.socket fd=1012, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59955), raddr=('127.0.0.1', 59950)>
+Exception ignored in: <socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60011), raddr=('127.0.0.1', 60006)>
+Traceback (most recent call last):
+  File "C:\Users\MROBOT\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 227, in __init__
+    self.acquire = lock.acquire
+ResourceWarning: unclosed <socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60011), raddr=('127.0.0.1', 60006)>

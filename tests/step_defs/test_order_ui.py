@@ -1,43 +1,37 @@
 import time
 
-from pytest_bdd import when, then, scenarios
+from faker import Faker
+from pytest_bdd import scenarios, given
+from pytest_bdd import then
 from selenium.webdriver.common.keys import Keys
 
+from tests.step_defs.conftest import TEST_USER_EMAIL, TEST_USER_PASSWORD, LOGIN_URL
+
 scenarios('../features/ui/order_ui.feature')
-from faker import Faker
-from pytest_bdd import given, when, then, scenario
 
 fake = Faker()
 
-@when("User clicks login")
-def login(browser):
-    login_elem = browser.find_element_by_id("login")
-    time.sleep(3)
-    login_elem.click()
 
-
-@then("Types username and password")
-def enter_data(browser):
-    username = "admin@test.com"
-    password = "12345"
+@given("user logs in their account")
+def user_logged_in(browser):
+    browser.get(LOGIN_URL)
+    username = TEST_USER_EMAIL
+    password = TEST_USER_PASSWORD
     email_field = browser.find_element_by_name("email")
     password_field = browser.find_element_by_name("password")
-
+    time.sleep(5)
     email_field.send_keys(username)
     password_field.send_keys(password)
-    submit_button = browser.find_element_by_class_name("login-button")
+    submit_button = browser.find_elements_by_class_name("login-button")[0]
+    time.sleep(3)
     submit_button.click()
-
-
-@then("User should see homepage")
-def see_results():
-    pass
 
 
 @then("User navigates to programming")
 def step_impl(browser):
     a_li = browser.find_elements_by_class_name("parent-li")
     elem = a_li[0]
+    time.sleep(2)
     elem.click()
 
 
@@ -46,12 +40,14 @@ def step_impl(browser):
     services = browser.find_elements_by_class_name("service-container")
     first_service = services[0]
     first_service.send_keys(Keys.ENTER)
+    time.sleep(2)
 
 
 @then("Chooses to pay")
-def step_impl(browser):
+def enter_payment_data(browser):
     stripe_button = browser.find_elements_by_class_name('StripeCheckout')[0].click()
     time.sleep(3)
+    # Switch the current frame to stripe_checkout_app frame
     browser.switch_to.frame('stripe_checkout_app')
     browser.find_element_by_xpath("//input[@placeholder='Email']").send_keys(fake.email())
     time.sleep(0.5)
@@ -76,7 +72,8 @@ def step_impl(browser):
 
 
 @then("The payment should be finished")
-def step_impl(browser):
-    time.sleep(3)
+def finish_payment(browser):
+    # the switch_to_default_content switches the screen from the modal, because the stripe form it's a modal
+    # to enter those data and to connect them directly with the stripe api
     browser.switch_to.default_content()
-
+    time.sleep(3)

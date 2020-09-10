@@ -1,10 +1,9 @@
 import requests
-from faker import Faker
 from pytest_bdd import scenario, given, when, then, parsers
-
+from faker import Faker
 from .conftest import BDD_BASE_URL
-
 fake = Faker()
+
 
 
 @scenario("../features/category.feature", "Add new Category")

@@ -1,0 +1,5 @@
+Exception ignored in: <socket.socket fd=972, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60118), raddr=('127.0.0.1', 60113)>
+Traceback (most recent call last):
+  File "c:\users\mrobot\desktop\flex-bdd-test\venvv\lib\site-packages\requests\structures.py", line 60, in __iter__
+    return (casedkey for casedkey, mappedvalue in self._store.values())
+ResourceWarning: unclosed <socket.socket fd=972, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60118), raddr=('127.0.0.1', 60113)>

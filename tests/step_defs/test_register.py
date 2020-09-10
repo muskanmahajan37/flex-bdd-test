@@ -15,6 +15,7 @@ def test_register_with_right_credentials():
 def test_register_with_wrong_credentials():
     pass
 
+
 @scenario("../features/register.feature", "User exist while trying to register")
 def test_register_exists():
     pass

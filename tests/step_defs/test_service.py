@@ -2,14 +2,15 @@ import random
 
 import requests
 from faker import Faker
-from pytest_bdd import given, when, then, scenario
+from pytest_bdd import given, when, then
 
 fake = Faker()
 
 
-@scenario('../features/service.feature', 'Create new service')
-def test_create_service():
-    pass
+#
+# @scenario('../features/service.feature', 'Create new service')
+# def test_create_service():
+#     pass
 
 
 @given("API endpoint for services")

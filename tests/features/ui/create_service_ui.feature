@@ -1,4 +1,4 @@
-@srvc
+@ui
 Feature: Service
   As a user,
   I want to create service,

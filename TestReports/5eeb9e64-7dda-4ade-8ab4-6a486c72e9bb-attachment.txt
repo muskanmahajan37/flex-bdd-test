@@ -1,0 +1,10 @@
+Exception ignored in: <socket.socket fd=944, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59687), raddr=('127.0.0.1', 59682)>
+Traceback (most recent call last):
+  File "c:\users\mrobot\desktop\flex-bdd-test\venvv\lib\site-packages\pluggy\callers.py", line 171, in _multicall
+    args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+ResourceWarning: unclosed <socket.socket fd=944, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59687), raddr=('127.0.0.1', 59682)>
+Exception ignored in: <socket.socket fd=980, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59877), raddr=('127.0.0.1', 59872)>
+Traceback (most recent call last):
+  File "c:\users\mrobot\desktop\flex-bdd-test\venvv\lib\site-packages\pluggy\callers.py", line 171, in _multicall
+    args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+ResourceWarning: unclosed <socket.socket fd=980, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59877), raddr=('127.0.0.1', 59872)>
